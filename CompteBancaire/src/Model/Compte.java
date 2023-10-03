@@ -1,16 +1,36 @@
 package Model;
-
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
-public class  Compte {
-    private Double solde;
-    private String numero;
-    private Date dateCreation;
-    private Etat etat;
-    private Employe employe;
-    private Client client;
-    private List<Operation> operations;
+public  class  Compte {
+    protected Double solde;
+    protected String numero;
+    protected LocalDate dateCreation;
+    protected Etat etat;
+
+    protected Employe employe;
+
+    protected Client client;
+
+
+    public Compte(Double solde, String numero, LocalDate dateCreation, Etat etat, Employe employe, Client client) {
+        setSolde(solde);
+        setNumero(numero);
+        setDateCreation(dateCreation);
+        setEtat(etat);
+        setEmploye(employe);
+        this.client = client;
+    }
+    private List<Operation<Compte>> operations;
+
+    public Compte() {
+
+    }
+
+    public Compte( String number, Double balance) {
+        setSolde(balance);
+        setNumero(number);
+    }
 
     public Double getSolde() {
         return solde;
@@ -28,11 +48,11 @@ public class  Compte {
         this.numero = numero;
     }
 
-    public Date getDateCreation() {
+    public LocalDate getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Date dateCreation) {
+    public void  setDateCreation(LocalDate dateCreation) {
         this.dateCreation = dateCreation;
     }
 
@@ -60,11 +80,11 @@ public class  Compte {
         this.client = client;
     }
 
-    public List<Operation> getOperations() {
+    public List<Operation<Compte>> getOperations() {
         return operations;
     }
 
-    public void setOperations(List<Operation> operations) {
+    public void setOperations(List<Operation<Compte>> operations) {
         this.operations = operations;
     }
 }

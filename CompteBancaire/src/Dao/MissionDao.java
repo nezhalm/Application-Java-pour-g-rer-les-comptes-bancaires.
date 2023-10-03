@@ -1,4 +1,7 @@
 package Dao;
 
-public interface MissionDao {
+import Model.Mission;
+
+public interface MissionDao extends GlobaleDao<Mission> {
+
 }

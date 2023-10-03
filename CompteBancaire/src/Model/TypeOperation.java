@@ -1,6 +1,5 @@
 package Model;
-
 public enum TypeOperation {
-    VERSEMENT,
-    RETRAIT
+    Deposit,
+    Withdrawal
 }

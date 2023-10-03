@@ -1,4 +1,7 @@
 package Dao;
+import Model.Compte;
+import Model.CompteCourant;
+
 import java.util.List;
 import java.util.Optional;
 

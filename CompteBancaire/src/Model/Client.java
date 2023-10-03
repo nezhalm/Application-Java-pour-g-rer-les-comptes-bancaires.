@@ -1,15 +1,17 @@
 package Model;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 public class Client extends Personne {
     private String code ;
     private String adresse ;
+    private Employe creator ;
 
-    public Client(String nom, String prenom,String telephone , Date dateNaissance, String code, String adresse) {
+    public Client(String nom, String prenom, String telephone , LocalDate dateNaissance, String code, String adresse) {
         super(nom, prenom, dateNaissance, telephone);
-        this.code = code;
-        this.adresse = adresse;
+        setCode(code);
+        setAdresse(adresse);
     }
 
 
@@ -44,5 +46,13 @@ public class Client extends Personne {
 
     public void setComptes(List<Compte> comptes) {
         this.comptes = comptes;
+    }
+
+    public Employe getCreator() {
+        return creator;
+    }
+
+    public void setCreator(Employe creator) {
+        this.creator = creator;
     }
 }

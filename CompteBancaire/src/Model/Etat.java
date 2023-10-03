@@ -1,9 +1,20 @@
 package Model;
 
 public enum Etat {
+        ACTIVE("Active"),
+        FROZEN("Frozen"),
+        CLOSED("Closed");
 
-        ACTIVE,
-        FROZEN,
-        CLOSED
+        private final String value;
 
+        private Etat(String value) {
+                this.value = value;
+        }
+
+
+
+    @Override
+        public String toString() {
+                return value;
+        }
 }

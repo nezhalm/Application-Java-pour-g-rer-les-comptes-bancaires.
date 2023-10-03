@@ -30,6 +30,7 @@ public class Connexion {
     }
 
     public Connection getConnection() {
+
         return connection;
     }
 

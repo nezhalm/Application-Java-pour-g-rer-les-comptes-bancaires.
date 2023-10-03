@@ -6,6 +6,16 @@ public class Mission {
     private String nom;
     private String code;
 
+    public Mission(String code, String nom, String description) {
+        setCode(code);
+        setNom(nom);
+        setDescription(description);
+    }
+
+    public Mission() {
+
+    }
+
     public List<Employe> getEmployes() {
         return employes;
     }

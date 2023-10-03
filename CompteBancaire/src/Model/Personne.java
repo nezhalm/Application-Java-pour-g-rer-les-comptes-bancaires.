@@ -1,18 +1,19 @@
 package Model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Personne {
-    private String nom;
-    private String prenom;
-    private Date dateNaissance;
-    private String telephone;
-    public Personne(String nom, String prenom, Date dateNaissance, String telephone) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.dateNaissance = dateNaissance;
-        this.telephone = telephone;
-    }
+    protected String nom;
+    protected String prenom;
+    protected LocalDate dateNaissance;
+    protected String telephone;
+    public Personne(String nom, String prenom, LocalDate dateNaissance, String telephone) {
+        setNom(nom);
+        setPrenom(prenom);
+        setDateNaissance(dateNaissance);
+        setTelephone(telephone);
+     }
 
     public Personne() {
 
@@ -34,11 +35,11 @@ public class Personne {
         this.prenom = prenom;
     }
 
-    public Date getDateNaissance() {
+    public LocalDate getDateNaissance() {
         return dateNaissance;
     }
 
-    public void setDateNaissance(Date dateNaissance) {
+    public void setDateNaissance(LocalDate dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 
