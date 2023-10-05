@@ -12,8 +12,8 @@ public class Client extends Personne {
         this.adresse = adresse;
     }
 
-//test
-    
+//git add
+
     private List<Compte> comptes;
 
     public Client() {
