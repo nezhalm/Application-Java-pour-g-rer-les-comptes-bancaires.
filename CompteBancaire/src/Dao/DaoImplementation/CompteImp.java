@@ -13,7 +13,7 @@ public class CompteImp implements GlobaleDao<Compte> {
     public Optional<Compte> ajouter(Compte compte) throws Exception {
         return Optional.empty();
     }
-//hfhgfhhh
+//hfhgfhhhjhghgghgh
     @Override
     public Optional<Integer> supprimer(Compte compte) throws Exception {
         return Optional.empty();
